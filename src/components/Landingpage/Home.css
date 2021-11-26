@@ -1,0 +1,16 @@
+@media screen and (min-width: 480px) {
+	.content{
+	    margin-left: 80px;
+	    margin-bottom: 80px;
+	    display: flex;
+	    align-items: space round;
+	    column-gap: 60px;
+	}
+}
+.content-main{
+    float:1 0 auto;
+}
+.footer{
+    flex-shrink: 0;
+}
+

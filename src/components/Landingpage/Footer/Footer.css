@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+.homepage-footer{
+	background: black;
+	/*background: #46008b;*/
+	color: white;
+	padding: 24px;
+}
+.social-footer{
+	display: flex;
+	justify-content: flex-end;
+}
+.footer-icon{
+ 	filter: invert(1);
+ 	background: white;
+ 	height: 36px;
+ 	margin: 0 10px;
+ 	transition: all 400ms;
+ }
+ .footer-icon:hover{
+ 	transform: scale(1.1);
+ }

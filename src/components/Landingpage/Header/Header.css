@@ -1,0 +1,138 @@
+.header-nav{
+	margin-top: 20vh;
+	font-size: 16px;
+	width:100%;
+	color: white;
+	display: flex;
+	justify-content: flex-end;
+	
+}
+ 
+.login-btn{
+	/*border: 1px solid black;
+	border-radius: 5px;
+    background: rgba(110, 30, 110,0.9);
+	*/
+	margin-right: 3px;
+	margin-bottom: 2px;
+	padding: 8px 10px;
+	border-radius: 0 0 6px 6px;
+	padding-top: 50px;
+	text-align: center;
+
+}
+.login-btn:hover{
+	cursor: pointer;
+	background: rgba(50, 20, 80,0.9);
+	
+}
+#company img {
+    position: absolute;
+    top: 0px;
+	left: 500px;
+	width: 90px;
+	height: auto;
+	border-radius: 10px;
+	max-width: 100%;
+	bottom: 15%;
+  position: absolute;
+  animation: linear ;
+  animation-name: run;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;  
+
+}
+
+@keyframes run {
+	0% {
+	  left: 500px;
+	  top: 0px;
+	}
+	50% {
+	  left: 0px;
+	  top: 0;
+	}
+	100% {
+	  left: 0px;
+	  top:0px;   
+	}
+  }
+
+#welcome{
+	color: white;
+	overflow: auto;
+	font-size: 20px;
+	margin-top:100px;
+}
+.victory-image{/*
+	position: relative;
+	top: 0;*/
+	width: 400px;
+}
+.header-main{
+    display: flex;
+    justify-content: space-between;
+}
+.header-banner{
+	text-align: center;
+	background: url('../assets/banner1.jpg');
+	background-size: cover;
+	height: 120vh;
+	margin-top: -20vh;
+	overflow:auto;
+}
+#welcome{
+	align-self: center;
+	display: inline-block;
+	overflow: auto;                                                                              
+	
+}
+.welcome-btn{
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	border-radius: 12px;
+	background-color: rgba(0,0,0,0.4);
+	padding: 10px 20px;
+	margin: 20px 0px;
+	transition: all 0.5;
+	
+}
+.welcome-btn:hover{
+	background-color:  rgba(0,0,0,0.6);
+	cursor: pointer;
+}
+
+@media only screen and (max-height:500px){
+    .header-banner{
+    	height: 500vh;
+	}
+}
+.aboutusheader{
+	color: white;
+	margin-top: 50px;
+
+	text-decoration: none;
+}
+.aboutusheader:hover{
+	cursor: pointer;
+	background: rgba(50, 20, 80,0.9);
+	
+
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+	color:rgba(50, 20, 80,0.9)
+  }
+  .nlink{
+	  display: block;
+  }
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }

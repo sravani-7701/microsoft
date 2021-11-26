@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+.container2 {
+  text-align: center;
+  border: 3px solid rgb(217, 217, 226);
+  border-radius: 5px;
+  padding: 20px 40px 40px;
+  max-width: 700px;
+  margin: auto;
+  padding: 10px;
+  transition: 0.3s;
+  animation: ease-in;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.container2:hover{
+  border: 3px solid rgba(128,0,128,0.8);
+}
+.text-container2{
+    flex: 1 1 auto;
+  }
+  .image-container2{
+    /*object-fit: contain;*/
+    align-self: flex-start;
+    height: 350px;
+  }
+    
+.vl {
+    /*border-left: 3px solid rgb(217,217,226);
+    */height: 400px;
+    position: relative;
+    margin-right: 30px;
+    margin-left: 40px;
+}
+#aboutush{
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 30px;
+  text-align: center;
+}
+@media only screen and (max-width: 800px){
+  .container2{
+      width: 90%;
+      height: auto;
+  }
+  .image-container2{
+    width: 100%;
+    height: auto;
+  }
+}

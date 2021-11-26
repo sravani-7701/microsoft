@@ -1,0 +1,98 @@
+.cdesign{
+    margin:2%;
+    width:85%;
+    box-shadow: 0px 0px 3px rgba(128,0,128,0.8);
+    transition: all 0.5s;
+    text-align: center;
+    border-radius:3%;
+    cursor: pointer;
+    padding: 1% 0 0 0;
+    text-align: center;
+    font-size: 20px;
+  }
+  .cdesign:hover{
+    box-shadow: none;
+    border: 1px solid rgba(128,0,128,0.8);
+  
+  }
+  .datetime{
+    margin-top:0;
+    margin-bottom:0;
+  }
+#assignmentfrm{
+    display:none;
+}
+.jumfrm{
+    font-size:  20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    padding-left: 40%;     
+    background-color: #fff9e3;
+    padding-bottom: 3%;
+    display:none;
+}
+#jfrm{
+  font-size:  20px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  padding-left: 40%;     
+  background-color: #fff9e3;
+  padding-bottom: 3%;
+}
+
+.btnp{
+    height:100%;
+    width:12%;
+    background-color: #2f2fa2;
+    border-radius:0 !important;
+    font-family: Arial;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin:1% 5% 1% 2%
+  }
+  .btnp:hover {
+    background: #2f2fa2;
+    text-decoration: none;
+  }
+  .react-datepicker {
+    font-size: 1.5rem !important;
+  }
+  
+  .react-datepicker__current-month {
+    font-size: 1.5rem !important;
+  }
+  
+  .react-datepicker__header {
+    padding-top: 6px !important;
+  }
+  
+  .react-datepicker__navigation {
+    top: 13px !important;
+  }
+  
+  .react-datepicker__day-name, .react-datepicker__day {
+    margin: 0.5rem !important;
+  }
+  .createformj{
+    position: absolute;
+    top:140%;
+    left:10%;
+    width:80%;
+    height:40vh;
+    font-weight: 10;
+    font-size: 30px;
+    padding: 7% 5% 1% 5%;
+    box-shadow: 0px 0px 3px rgba(128,0,128,0.8);
+    background-color: #F64C72;
+    z-index: 5500;
+  }
+  .lbl{
+    display: block;
+    color: #fff;
+  }
+  .fmj{
+    height:30px;
+    font-size: 20px;
+    width:50%;
+    font-family: Arial, Helvetica, sans-serif;
+  }

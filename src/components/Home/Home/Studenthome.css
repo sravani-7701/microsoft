@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.home{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.nave{
+    position: fixed;
+    display:flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    background-color:#2F2FA2;
+    color: #F64C72;
+    width: 100%;
+    height: 10vh;
+    padding:1% 5% 2% 20%; 
+    font-size: 350%;
+    font-weight: 6000;
+    font-family: 'Great Vibes', cursive;
+    z-index: 9999;
+}
+.sidebar{
+    position: fixed;
+    margin:10vh 0vw 0vh 0vw;
+    background-color:aqua;
+    width: 15vw;
+}
+.homebody{
+    display: flex;
+}
+.mainpart{
+    position:absolute;
+    top:11vh;
+    left:15vw;
+    width: 83vw;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.stop{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+
+}
+.background{
+    position:absolute;
+}
+.homepage{
+    background:url(./home.jpg);
+    background-repeat:no-repeat;
+    width: 100%;
+    background-size:88vw 88vh;
+    height:88vh;
+}
+.times{
+    position:absolute;
+    top:20vh;
+    left:25vw;
+    font-size:50px;
+    color:#2F2FA2;
+    font-weight: bold;
+}
+.quotecontainer{
+    position:absolute;
+    top:0;
+    left:13%;
+    right:21%;
+    background-color:#D8A156;
+    padding: 3%;
+    text-align:center;
+    color:black;
+    z-index: 55;
+    font-size: 20px;
+    padding-bottom: 0%;
+}
+.btnlogout{ 
+    background-color:#2F2FA2;
+    color:#F64C72;
+    height: 200%;
+    width:10%;
+    font-style:sans-serif !important;
+}

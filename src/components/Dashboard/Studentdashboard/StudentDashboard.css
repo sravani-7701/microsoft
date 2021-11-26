@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bodys{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: blue;
+}
+.totals{
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+.lefts{
+    width: 350px;
+    background-color:green;
+    height:560px;
+}
