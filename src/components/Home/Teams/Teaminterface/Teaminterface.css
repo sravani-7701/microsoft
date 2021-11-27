@@ -195,3 +195,13 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+.callbutton{
+  margin-left: 35vw;
+  margin-bottom: 60vh;
+}
+.btnmeeting{
+  height:10vh;
+  width:20vw;
+  font-size: 20px;
+  background-color: #3cb0fd;
+}

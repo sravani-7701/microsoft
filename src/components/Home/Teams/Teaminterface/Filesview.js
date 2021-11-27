@@ -12,7 +12,7 @@ function Filesview({files}) {
        var originalname=e.currentTarget.getAttribute('data-ext');
        axios({
         method: "GET",
-        url: `/file/${filename}`,
+        url: `https://ms-classrooms.herokuapp.com/file/${filename}`,
         responseType: "blob"
       })
         .then(response => {

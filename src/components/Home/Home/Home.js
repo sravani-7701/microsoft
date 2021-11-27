@@ -23,7 +23,7 @@ const logout=()=>{
     //whenever we fetch a api from server loader is set to false
     setloader(false);
     //fetching logout api from server
-    fetch("/logout",{
+    fetch("https://ms-classrooms.herokuapp.com/logout",{
         method:"GET",
         headers: {
             Accept: "application/json",
@@ -43,7 +43,7 @@ const callabout=async() =>{
      try{
          //this is done for authenticating as well as fetch user details. 
          setloader(false);
-         const res= await fetch("/about",{
+         const res= await fetch("https://ms-classrooms.herokuapp.com/about",{
              method:"GET",
              headers: {
                  Accept: "application/json",

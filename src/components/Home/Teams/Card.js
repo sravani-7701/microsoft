@@ -12,7 +12,7 @@ function Card({team,key}) {
         try{
         
             //fetch team details from server
-            const res= await fetch(`/teamdetails/${team}`,{
+            const res= await fetch(`https://ms-classrooms.herokuapp.com/teamdetails/${team}`,{
                 method:"GET",
                 headers: {
                     Accept: "application/json",

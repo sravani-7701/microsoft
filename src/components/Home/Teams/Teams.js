@@ -25,7 +25,7 @@ function Teams() {
             const AdminEmail=user.email;
             const name=teamname;
             //fetching api from server
-            const res=await fetch("/team",{
+            const res=await fetch("https://ms-classrooms.herokuapp.com/team",{
               method: "POST",
               headers:{
                 "Content-Type": "application/json"

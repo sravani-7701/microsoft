@@ -10,13 +10,12 @@ import { BrowserRouter as Router, Switch, Route,useParams } from "react-router-d
 import Pusher from "pusher-js";
 const Discussionhome = () => {
   const {id,userid,username}=useParams();
-  console.log(userid);
   const [posts,setposts] = useState([]);
   const[query,setquery]=useState("");
   const getdiscussions=async()=>{
   try{
       setposts([]);
-      const res= await fetch(`/discussion/${id}`,{
+      const res= await fetch(`https://ms-classrooms.herokuapp.com/discussion/${id}`,{
           method:"GET",
           headers: {
               Accept: "application/json",
@@ -26,7 +25,6 @@ const Discussionhome = () => {
       });
       const dataarray=await res.json();
       setposts([...dataarray]);
-      console.log(dataarray);
       if(!res.status===200){
           const error=new Error(res.error);
           throw error;
@@ -49,8 +47,6 @@ const Discussionhome = () => {
     const channel = pusher.subscribe("questions");
     channel.bind("insertion", (data) => {
       if(data.team_id ===id){
-        console.log(posts.length);
-        console.log(data);
         handleposts(data);
       }
 
@@ -62,7 +58,7 @@ const Discussionhome = () => {
   }, [posts]);
   const Like=async(post)=>{ //like the post
       try{
-        const res=await fetch("/like",{
+        const res=await fetch("https://ms-classrooms.herokuapp.com/like",{
           method: "PUT",
           headers:{
             "Content-Type": "application/json"
@@ -80,7 +76,7 @@ const Discussionhome = () => {
   }
   const Dislike=async(post)=>{ //dislike
     try{
-      const res=await fetch("/dislike",{
+      const res=await fetch("https://ms-classrooms.herokuapp.com/dislike",{
         method: "PUT",
         headers:{
           "Content-Type": "application/json"
@@ -89,9 +85,7 @@ const Discussionhome = () => {
          id:post._id,teamid:id,userid:userid
         })
       });
-      alert("re");
       const data=await res.json();
-        console.log(data);
         setposts([...data]);
       
      }
@@ -101,7 +95,7 @@ const Discussionhome = () => {
 }
 const makeComment=async(comment,postid)=>{ //post a comment
   try{
-    const res=await fetch('/comment',{
+    const res=await fetch('https://ms-classrooms.herokuapp.com/comment',{
         method:"put",
         headers:{
             "Content-Type":"application/json",

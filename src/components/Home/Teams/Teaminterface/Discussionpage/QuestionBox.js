@@ -7,7 +7,7 @@ function QuestionBox({team_id,owner,owner_id}){
   const AskQuestion = async (e) => {
     e.preventDefault();
     try{
-      const res=await fetch("/discussion",{
+      const res=await fetch("https://ms-classrooms.herokuapp.com/discussion",{
         method: "POST",
         headers:{
           "Content-Type": "application/json"
@@ -18,6 +18,7 @@ function QuestionBox({team_id,owner,owner_id}){
       });
       if(res.status===200){
         alert("sucess");
+        setQuestion("");
       }
       else{
         alert("check");

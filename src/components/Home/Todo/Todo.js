@@ -20,7 +20,7 @@ function Todo() {
 
 	const GetTodos = () => {
 		setloader(false);
-		fetch('/todos/'+userid)
+		fetch('https://ms-classrooms.herokuapp.com/todos/'+userid)
 			.then(res => res.json())
 			.then(data => setTodos(data))
 			.catch((err) => console.error("Error: ", err));
@@ -29,7 +29,7 @@ function Todo() {
 
 	const completeTodo = async id => {
 		setloader(false);
-		const data = await fetch('/todo/complete/' + id).then(res => res.json());
+		const data = await fetch('https://ms-classrooms.herokuapp.com/todo/complete/' + id).then(res => res.json());
 
 		setTodos(todos => todos.map(todo => {
 			if (todo._id === data._id) {
@@ -43,7 +43,7 @@ function Todo() {
 
 	const addTodo = async () => {
 		setloader(false);
-		const data = await fetch( "/todo/"+userid, {
+		const data = await fetch( "https://ms-classrooms.herokuapp.com/todo/"+userid, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json" 
@@ -62,7 +62,7 @@ function Todo() {
 
 	const deleteTodo = async id => {
 		setloader(false);
-		const data = await fetch('/todo/' + id, { method: "DELETE" }).then(res => res.json());
+		const data = await fetch('https://ms-classrooms.herokuapp.com/todo/' + id, { method: "DELETE" }).then(res => res.json());
 		setTodos(todos => todos.filter(todo => todo._id !== data.result._id));
 		setloader(true);
 	}
