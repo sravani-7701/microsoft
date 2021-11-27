@@ -10,7 +10,6 @@ function Teaminterface() {
     let {id,isAdmin}=useParams(); 
     let history = useHistory();
     const user=useContext(UserDetails);
-    console.log(user);
     let userid;
     if(user && user._id){
         userid=user._id;
@@ -30,10 +29,6 @@ function Teaminterface() {
    const handleDiscussion=(e)=>{
        history.push(`/discussion/${id}/${userid}/${user.name}`)
    }
-    console.log(item);
-
-    console.log(id);
-    console.log(isAdmin);
     return (
             <div className="interface">
                 < div className="navii">

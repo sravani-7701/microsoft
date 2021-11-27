@@ -15,9 +15,7 @@ function TeacherAssignment() {
     const[selectedfile,setselectedfile]=useState(null)
     let {id,isAdmin}=useParams();
     let history = useHistory();
-    console.log(id);
     const  changefile=(e)=>{  //dynamically set the file to choosen file
-        console.log("change");
          setselectedfile(e.target.files[0]);
     }
     const cancelform=(e)=>{  // hide the form 
@@ -31,7 +29,6 @@ function TeacherAssignment() {
         try{
         setloader(false);
         e.preventDefault();
-        console.log(selectedfile);
         const formData=new FormData();
         var sdate=new Date(startdate);
         var edate=new Date(enddate);
@@ -40,7 +37,8 @@ function TeacherAssignment() {
         }
         else{
         formData.append('file',selectedfile);
-        const res= await fetch(`/createassignment/${id}/${startdate}/${enddate}`,{
+        alert("started");
+        const res= await fetch(`https://ms-classrooms.herokuapp.com/createassignment/${id}/${startdate}/${enddate}`,{
               method: "POST",
               headers: {
                 'Accept': 'application/json',
@@ -74,7 +72,7 @@ function TeacherAssignment() {
         var originalname=e.currentTarget.getAttribute('data-ext');
         axios({
          method: "GET",
-         url: `/file/${filename}`,
+         url: `https://ms-classrooms.herokuapp.com/file/${filename}`,
          responseType: "blob"
        })
          .then(response => {
@@ -89,7 +87,7 @@ function TeacherAssignment() {
     const getteam=async() =>{
         try{
             setloader(false);
-            const res= await fetch(`/teamdetails/${id}`,{
+            const res= await fetch(`https://ms-classrooms.herokuapp.com/teamdetails/${id}`,{
                 method:"GET",
                 headers: {
                     Accept: "application/json",
@@ -103,10 +101,8 @@ function TeacherAssignment() {
                 const error=new Error(res.error);
                 throw error;
             }
-            console.log(data);
             setteam(data);
             setloader(true);
-            console.log("end")
         }
         catch(err){
             console.log(err);

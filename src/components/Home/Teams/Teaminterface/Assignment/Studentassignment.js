@@ -15,7 +15,6 @@ function Studentassignment() {
     const uploadfile=(e)=>{ //student can upload the answer sheet
       var filename=e.currentTarget.getAttribute('value');
       var enddate=e.currentTarget.getAttribute('data-end')
-      console.log(enddate);
       var et=new Date(enddate);
       var today=new Date(Date.now())
       console.log(et);
@@ -35,7 +34,7 @@ function Studentassignment() {
         var originalname=e.currentTarget.getAttribute('data-ext');
         axios({
          method: "GET",
-         url: `/file/${filename}`,
+         url: `https://ms-classrooms.herokuapp.com/file/${filename}`,
          responseType: "blob"
        })
          .then(response => {
@@ -49,7 +48,7 @@ function Studentassignment() {
     const getteam=async() =>{
         try{
             setloader(false);
-            const res= await fetch(`/teamdetails/${id}`,{
+            const res= await fetch(`https://ms-classrooms.herokuapp.com/teamdetails/${id}`,{
                 method:"GET",
                 headers: {
                     Accept: "application/json",
@@ -62,7 +61,6 @@ function Studentassignment() {
                 const error=new Error(res.error);
                 throw error;
             }
-            console.log(data);
             setteam(data);
             setloader(true);
         }

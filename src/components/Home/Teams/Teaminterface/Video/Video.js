@@ -20,7 +20,7 @@ import Modal from 'react-bootstrap/Modal'
 import 'bootstrap/dist/css/bootstrap.css'
 import "./Video.css"
 
-const server_url ="http://localhost:5000"
+const server_url ="https://ms-classrooms.herokuapp.com/"
 
 var connections = {}
 const peerConnectionConfig = {
@@ -271,11 +271,8 @@ class Video extends Component {
 
 	connectToSocketServer = () => {
 		socket = io.connect(server_url, { secure: true })
-        console.log(socket);
 		socket.on('signal', this.gotMessageFromServer)
-        alert("hii");
 		socket.on('connect', () => {
-			alert("ppp");
 			socket.emit('join-call', window.location.href)
 			socketId = socket.id
             

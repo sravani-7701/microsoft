@@ -16,8 +16,9 @@ function Signup() {
     const Signup=async(e)=>{
     setloader(false);
     e.preventDefault();
-   const res=await fetch("/signup",{
+   const res=await fetch("https://ms-classrooms.herokuapp.com/signup",{
      method: "POST",
+     credentials:"include",
      headers:{
        "Content-Type": "application/json"
      },
