@@ -15,7 +15,7 @@ const Discussionhome = () => {
   const getdiscussions=async()=>{
   try{
       setposts([]);
-      const res= await fetch(`https://ms-classrooms.herokuapp.com/discussion/${id}`,{
+      const res= await fetch(`/discussion/${id}`,{
           method:"GET",
           headers: {
               Accept: "application/json",
@@ -58,7 +58,7 @@ const Discussionhome = () => {
   }, [posts]);
   const Like=async(post)=>{ //like the post
       try{
-        const res=await fetch("https://ms-classrooms.herokuapp.com/like",{
+        const res=await fetch("/like",{
           method: "PUT",
           headers:{
             "Content-Type": "application/json"
@@ -76,7 +76,7 @@ const Discussionhome = () => {
   }
   const Dislike=async(post)=>{ //dislike
     try{
-      const res=await fetch("https://ms-classrooms.herokuapp.com/dislike",{
+      const res=await fetch("/dislike",{
         method: "PUT",
         headers:{
           "Content-Type": "application/json"
@@ -95,7 +95,7 @@ const Discussionhome = () => {
 }
 const makeComment=async(comment,postid)=>{ //post a comment
   try{
-    const res=await fetch('https://ms-classrooms.herokuapp.com/comment',{
+    const res=await fetch('/comment',{
         method:"put",
         headers:{
             "Content-Type":"application/json",

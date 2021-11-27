@@ -38,7 +38,7 @@ function TeacherAssignment() {
         else{
         formData.append('file',selectedfile);
         alert("started");
-        const res= await fetch(`https://ms-classrooms.herokuapp.com/createassignment/${id}/${startdate}/${enddate}`,{
+        const res= await fetch(`/createassignment/${id}/${startdate}/${enddate}`,{
               method: "POST",
               headers: {
                 'Accept': 'application/json',

@@ -21,7 +21,7 @@ function File() {
       const formData=new FormData();
       formData.append('name',"ss");
       formData.append('file',selectedfile)
-      const res= await fetch(`https://ms-classrooms.herokuapp.com/upload/${id}`,{
+      const res= await fetch(`/upload/${id}`,{
             method: "POST",
             headers: {
               'Accept': 'application/json',
@@ -56,7 +56,7 @@ function File() {
     const getteam=async() =>{
       try{
         setloader(false);
-          const res= await fetch(`https://ms-classrooms.herokuapp.com/teamdetails/${id}`,{
+          const res= await fetch(`/teamdetails/${id}`,{
               method:"GET",
               headers: {
                   Accept: "application/json",

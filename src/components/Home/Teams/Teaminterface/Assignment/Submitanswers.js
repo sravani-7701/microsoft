@@ -14,7 +14,7 @@ function Submitanswers() {
         const formData=new FormData();
         formData.append('name',"ss");
         formData.append('file',selectedfile)
-        const res= await fetch(`https://ms-classrooms.herokuapp.com/submitassignment/${id}/${filename}/${userid}`,{
+        const res= await fetch(`/submitassignment/${id}/${filename}/${userid}`,{
               method: "POST",
               headers: {
                 'Accept': 'application/json',
