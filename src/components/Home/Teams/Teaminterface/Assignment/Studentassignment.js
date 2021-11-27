@@ -34,7 +34,7 @@ function Studentassignment() {
         var originalname=e.currentTarget.getAttribute('data-ext');
         axios({
          method: "GET",
-         url: `https://ms-classrooms.herokuapp.com/file/${filename}`,
+         url: `/file/${filename}`,
          responseType: "blob"
        })
          .then(response => {
@@ -48,7 +48,7 @@ function Studentassignment() {
     const getteam=async() =>{
         try{
             setloader(false);
-            const res= await fetch(`https://ms-classrooms.herokuapp.com/teamdetails/${id}`,{
+            const res= await fetch(`/teamdetails/${id}`,{
                 method:"GET",
                 headers: {
                     Accept: "application/json",

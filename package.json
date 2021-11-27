@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "proxy": "http://192.168.56.1:5000",
   "version": "0.1.0",
   "pnpm rivate": true,
   "dependencies": {

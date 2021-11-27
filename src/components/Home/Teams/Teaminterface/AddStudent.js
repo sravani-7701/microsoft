@@ -10,7 +10,7 @@ function AddStudent() { //add student to current team only admin can do this
         try{
           setloader(false);
           e.preventDefault();
-          const res=await fetch("https://ms-classrooms.herokuapp.com/student",{
+          const res=await fetch("/student",{
             method: "POST",
             headers:{
               "Content-Type": "application/json"

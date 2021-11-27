@@ -7,7 +7,7 @@ function QuestionBox({team_id,owner,owner_id}){
   const AskQuestion = async (e) => {
     e.preventDefault();
     try{
-      const res=await fetch("https://ms-classrooms.herokuapp.com/discussion",{
+      const res=await fetch("/discussion",{
         method: "POST",
         headers:{
           "Content-Type": "application/json"

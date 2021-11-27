@@ -16,7 +16,7 @@ function Teambody({item}) {
         setloader(false);
         const l=uuidv4();
         const url=`${window.location.protocol}://${window.location.host}/calls/${l}`;
-        const res=await fetch('https://ms-classrooms.herokuapp.com/calls',{
+        const res=await fetch('/calls',{
             method:"POST",
             headers:{
               'Content-type':"application/json"

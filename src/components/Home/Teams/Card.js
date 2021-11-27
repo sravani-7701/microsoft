@@ -12,7 +12,7 @@ function Card({team,key}) {
         try{
         
             //fetch team details from server
-            const res= await fetch(`https://ms-classrooms.herokuapp.com/teamdetails/${team}`,{
+            const res= await fetch(`/teamdetails/${team}`,{
                 method:"GET",
                 headers: {
                     Accept: "application/json",
@@ -27,7 +27,7 @@ function Card({team,key}) {
             console.log(err);
         }
     }
-    useEffect(() =>{getteam()},[teamdetails]);//after every refresh updates the team details
+    useEffect(() =>{getteam()},[]);//after every refresh updates the team details
     const redirectsubject=(e)=>{
       let flag="0";
       if(teamdetails.AdminEmail===user.email){

@@ -11,7 +11,7 @@ function Answers() {
     const getteam=async() =>{
         try{
             setloader(false);
-            const res= await fetch(`https://ms-classrooms.herokuapp.com/teamdetails/${id}`,{ //fecth teamdetails with particular id
+            const res= await fetch(`/teamdetails/${id}`,{ //fecth teamdetails with particular id
                 method:"GET",
                 headers: {
                     Accept: "application/json",
@@ -42,7 +42,7 @@ function Answers() {
         var id=e.currentTarget.getAttribute('data-id');
         axios({
          method: "GET",
-         url: `https://ms-classrooms.herokuapp.com/file/${filename}`,
+         url: `/file/${filename}`,
          responseType: "blob"
        })
          .then(response => {
