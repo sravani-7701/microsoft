@@ -10,7 +10,7 @@ function Activity() {
         if(user&&user.Activity){
             setactivity(user.Activity);
         }   
-     },[user])
+     },[])
     return (
         <div>
             {activity.map( (a, index)=>{
